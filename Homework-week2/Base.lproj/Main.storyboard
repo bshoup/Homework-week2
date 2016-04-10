@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="7rX-Io-LCb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2tA-dz-Wgd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -61,7 +61,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1157"/>
                     <connections>
-                        <outlet property="scrollView" destination="xbI-ZF-jn8" id="Yb5-ZN-0Pu"/>
+                        <outlet property="scrollView" destination="xbI-ZF-jn8" id="UfA-li-eWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fST-pO-6I6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,18 +119,20 @@
                                                 <rect key="frame" x="0.0" y="14" width="320" height="104"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="Lq9-fF-lhu">
+                                            <view contentMode="scaleToFill" id="Kyy-r7-qEu" userLabel="signinCover">
+                                                <rect key="frame" x="110" y="30" width="101" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.15143669383819136" green="0.67238522927678934" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="Lq9-fF-lhu">
                                                 <rect key="frame" x="152" y="42" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </activityIndicatorView>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RtW-Ad-czW" userLabel="Sign In button">
-                                                <rect key="frame" x="21" y="30" width="283" height="44"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RtW-Ad-czW" userLabel="Sign In button">
+                                                <rect key="frame" x="3" y="30" width="319" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="didPressLogin:" destination="7rX-Io-LCb" eventType="touchUpInside" id="HjI-eY-XZ4"/>
-                                                    <action selector="didPressLogin:forEvent:" destination="7rX-Io-LCb" eventType="touchUpInside" id="Zsd-fO-xKw"/>
-                                                    <action selector="signInButton:" destination="7rX-Io-LCb" eventType="touchUpInside" id="5Jz-jW-maY"/>
-                                                    <action selector="signinButton:" destination="7rX-Io-LCb" eventType="touchUpInside" id="BVn-5N-dKR"/>
+                                                    <action selector="didPressLogin:" destination="7rX-Io-LCb" eventType="touchUpInside" id="Me4-1M-rEZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -161,7 +163,9 @@
                         <outlet property="passwordField" destination="jf0-i1-Ryd" id="7z1-Qy-WVM"/>
                         <outlet property="scrollView" destination="pjB-71-N0A" id="Ps2-iv-ZY7"/>
                         <outlet property="signinButton" destination="RtW-Ad-czW" id="990-Uk-ttC"/>
+                        <outlet property="signinCover" destination="Kyy-r7-qEu" id="VOf-JL-nAX"/>
                         <outlet property="signinIndicator" destination="Lq9-fF-lhu" id="awn-gS-P4V"/>
+                        <segue destination="kE8-xE-60d" kind="modal" identifier="LoggedInSegue" id="5GX-we-kv0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsk-9E-qIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,6 +176,225 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1131" y="373"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="oGc-So-Vjb">
+            <objects>
+                <viewController id="kE8-xE-60d" userLabel="Tutorial View Controller" customClass="TutorialViewController" customModule="Homework_week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qgx-v7-18K">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Ohi-9w-geP">
+                                <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome1" id="Tl1-nz-0v9" userLabel="Image View 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome2" id="uZu-gr-hQB" userLabel="Image View 2">
+                                        <rect key="frame" x="320" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome3" id="cr1-iE-y9t" userLabel="Image View 3">
+                                        <rect key="frame" x="640" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome4" id="JA8-JD-iIa" userLabel="Image View 4">
+                                        <rect key="frame" x="960" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="jkf-ln-zhJ">
+                                <rect key="frame" x="141" y="499" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.24971772936985071" green="0.61214438829283624" blue="1" alpha="0.39800848988439308" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.2497177294" green="0.61214438829999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <view opaque="NO" contentMode="scaleToFill" id="9Ge-Bu-bSO" userLabel="spinButton">
+                                <rect key="frame" x="7" y="430" width="314" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JzQ-6v-xge">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="backup_button"/>
+                                        <connections>
+                                            <segue destination="2tA-dz-Wgd" kind="modal" modalTransitionStyle="crossDissolve" id="kgN-OL-iLL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1280" height="568"/>
+                    <connections>
+                        <outlet property="pageControl" destination="jkf-ln-zhJ" id="dXh-K6-Eh4"/>
+                        <outlet property="scrollView" destination="Ohi-9w-geP" id="Pim-mU-6qX"/>
+                        <outlet property="spinButtonView" destination="9Ge-Bu-bSO" id="QaX-dD-5TL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bh1-dZ-FHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="373"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y7w-pD-wOc">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="2tA-dz-Wgd" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ekw-3R-XJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3wV-uO-h49" kind="relationship" relationship="rootViewController" id="EMB-Va-Pyb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmQ-7h-P49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3128" y="373"/>
+        </scene>
+        <!--Timeline View Controller-->
+        <scene sceneID="TbW-uN-haP">
+            <objects>
+                <viewController id="3wV-uO-h49" userLabel="Timeline View Controller" customClass="TimelineViewController" customModule="Homework_week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hpx-ku-ttt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1629"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bI7-f5-7iF">
+                                <rect key="frame" x="0.0" y="65" width="320" height="1629"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed" id="zjq-Bz-TYq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1564"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed_nav" id="7qw-Bb-3ou" userLabel="feed nav bar">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="mnl-Ar-s0x">
+                                <rect key="frame" x="0.0" y="533" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Vi-zw-eRW" userLabel="Settings Button">
+                                <rect key="frame" x="0.0" y="20" width="46" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="OV6-jX-Vox" kind="modal" id="lrJ-G6-8gR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kO5-zA-Kkj" userLabel="Conversations Button">
+                                <rect key="frame" x="268" y="20" width="46" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="CKC-GB-DDJ" kind="push" id="648-SM-2hX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LIY-Q3-Wkl"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1629"/>
+                    <connections>
+                        <outlet property="scrollView" destination="bI7-f5-7iF" id="NtR-Jb-Yw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfb-IC-kai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3689" y="344.5"/>
+        </scene>
+        <!--Conversations-->
+        <scene sceneID="NYK-nE-jka">
+            <objects>
+                <viewController id="CKC-GB-DDJ" userLabel="Conversations" customClass="ConversationsViewController" customModule="Homework_week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6WV-UA-Sa4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conversations" id="Y41-9I-eMZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d19-SQ-dKR">
+                                <rect key="frame" x="7" y="25" width="46" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backButton:" destination="CKC-GB-DDJ" eventType="touchUpInside" id="dwt-06-5sH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dI1-Fe-9Cy"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyL-aa-GBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4248" y="-186"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="1cQ-xo-Z3I">
+            <objects>
+                <viewController id="OV6-jX-Vox" userLabel="Settings" customClass="SettingsViewController" customModule="Homework_week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tHN-mf-QCA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_nav" id="UVF-W4-tq9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="HcM-GY-owz">
+                                <rect key="frame" x="0.0" y="64" width="320" height="706"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings" id="8qf-4L-yV9">
+                                        <rect key="frame" x="1" y="0.0" width="320" height="695"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mfz-YC-s9C" customClass="signedOutSegue">
+                                        <rect key="frame" x="1" y="622" width="319" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="signOutButton:" destination="OV6-jX-Vox" eventType="touchUpInside" id="6LO-Xx-hVV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bMG-So-IZA">
+                                <rect key="frame" x="5" y="18" width="56" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="OV6-jX-Vox" eventType="touchUpInside" id="BbE-WG-Cnh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="800"/>
+                    <connections>
+                        <outlet property="scrollView" destination="HcM-GY-owz" id="cQk-e1-zdm"/>
+                        <segue destination="ybg-16-jZI" kind="modal" identifier="signedOutSegue" id="iLe-GI-voP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0s-qb-QtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4765" y="365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jm3-E1-fh6">
@@ -190,10 +413,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8F2-qa-zdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="373"/>
+            <point key="canvasLocation" x="182" y="373"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backup_button" width="320" height="97"/>
+        <image name="conversations" width="320" height="568"/>
+        <image name="feed" width="320" height="1564"/>
+        <image name="feed_nav" width="320" height="65"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>
@@ -203,7 +430,14 @@
         <image name="intro_tile6" width="76" height="75"/>
         <image name="login_form" width="320" height="113"/>
         <image name="login_text" width="320" height="70"/>
+        <image name="scrubber" width="320" height="36"/>
+        <image name="settings" width="320" height="695"/>
+        <image name="settings_nav" width="320" height="64"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="sign_in_nav_bar" width="320" height="66"/>
+        <image name="welcome1" width="320" height="568"/>
+        <image name="welcome2" width="320" height="568"/>
+        <image name="welcome3" width="320" height="568"/>
+        <image name="welcome4" width="320" height="568"/>
     </resources>
 </document>

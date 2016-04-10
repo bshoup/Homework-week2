@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "42A347EB3DE734BFEC15D89A88737C2DBD01CF0F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "31522CC47489E4F65383EDCFFB0D5A59AD8DD705" : 0,
+    "42A347EB3DE734BFEC15D89A88737C2DBD01CF0F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "717242DD-B9AF-4AFF-9AE8-C5834F22A52D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "31522CC47489E4F65383EDCFFB0D5A59AD8DD705" : "..",
+    "42A347EB3DE734BFEC15D89A88737C2DBD01CF0F" : "Homework-week2\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Homework-week2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Homework-week2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bshoup\/CodePath-Homework.git%0A%0A%0A%0A%0A%0A%0Ahttps:\/\/github.com\/bshoup\/CodePath-Homework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "31522CC47489E4F65383EDCFFB0D5A59AD8DD705"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bshoup\/Homework-week2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "42A347EB3DE734BFEC15D89A88737C2DBD01CF0F"
+    }
+  ]
+}

@@ -15,6 +15,10 @@
 		6A5F1DC01CB5D98500348818 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DBF1CB5D98500348818 /* Common.swift */; };
 		6A5F1DC41CB5E70C00348818 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DC31CB5E70C00348818 /* UserViewController.swift */; };
 		6A5F1DC61CB5F1A200348818 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DC51CB5F1A200348818 /* LoginViewController.swift */; };
+		6A5F1DCA1CB98AF700348818 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DC91CB98AF700348818 /* TutorialViewController.swift */; };
+		6A5F1DCE1CB9E00C00348818 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DCD1CB9E00C00348818 /* TimelineViewController.swift */; };
+		6A5F1DD01CB9E46200348818 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DCF1CB9E46200348818 /* ConversationsViewController.swift */; };
+		6A5F1DD21CB9E8DE00348818 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5F1DD11CB9E8DE00348818 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		6A5F1DBF1CB5D98500348818 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		6A5F1DC31CB5E70C00348818 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = ../UserViewController.swift; sourceTree = "<group>"; };
 		6A5F1DC51CB5F1A200348818 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6A5F1DC91CB98AF700348818 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = ../TutorialViewController.swift; sourceTree = "<group>"; };
+		6A5F1DCD1CB9E00C00348818 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineViewController.swift; path = ../TimelineViewController.swift; sourceTree = "<group>"; };
+		6A5F1DCF1CB9E46200348818 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		6A5F1DD11CB9E8DE00348818 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 		6A5F1DA11CB5D7DF00348818 = {
 			isa = PBXGroup;
 			children = (
+				6A5F1DCF1CB9E46200348818 /* ConversationsViewController.swift */,
 				6A5F1DAC1CB5D7DF00348818 /* Homework-week2 */,
 				6A5F1DAB1CB5D7DF00348818 /* Products */,
 			);
@@ -60,11 +69,14 @@
 		6A5F1DAC1CB5D7DF00348818 /* Homework-week2 */ = {
 			isa = PBXGroup;
 			children = (
+				6A5F1DCD1CB9E00C00348818 /* TimelineViewController.swift */,
+				6A5F1DC91CB98AF700348818 /* TutorialViewController.swift */,
 				6A5F1DC31CB5E70C00348818 /* UserViewController.swift */,
 				6A5F1DBF1CB5D98500348818 /* Common.swift */,
 				6A5F1DAD1CB5D7DF00348818 /* AppDelegate.swift */,
 				6A5F1DAF1CB5D7DF00348818 /* ViewController.swift */,
 				6A5F1DB11CB5D7DF00348818 /* Main.storyboard */,
+				6A5F1DD11CB9E8DE00348818 /* SettingsViewController.swift */,
 				6A5F1DC51CB5F1A200348818 /* LoginViewController.swift */,
 				6A5F1DB41CB5D7DF00348818 /* Assets.xcassets */,
 				6A5F1DB61CB5D7DF00348818 /* LaunchScreen.storyboard */,
@@ -147,8 +159,12 @@
 				6A5F1DB01CB5D7DF00348818 /* ViewController.swift in Sources */,
 				6A5F1DC41CB5E70C00348818 /* UserViewController.swift in Sources */,
 				6A5F1DC01CB5D98500348818 /* Common.swift in Sources */,
+				6A5F1DD01CB9E46200348818 /* ConversationsViewController.swift in Sources */,
 				6A5F1DC61CB5F1A200348818 /* LoginViewController.swift in Sources */,
+				6A5F1DCE1CB9E00C00348818 /* TimelineViewController.swift in Sources */,
+				6A5F1DCA1CB98AF700348818 /* TutorialViewController.swift in Sources */,
 				6A5F1DAE1CB5D7DF00348818 /* AppDelegate.swift in Sources */,
+				6A5F1DD21CB9E8DE00348818 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +312,7 @@
 				6A5F1DBE1CB5D7E000348818 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

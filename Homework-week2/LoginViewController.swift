@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signinIndicator: UIActivityIndicatorView!
     
     
+    @IBOutlet weak var signinCover: UIView!
+    
     
     var fieldParentInitialY: CGFloat!
     var fieldParentOffset: CGFloat!
@@ -37,7 +39,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         scrollView.contentSize = CGSize(width: 320, height: 600)
-        scrollView.contentSize = scrollView.frame.size
+        //scrollView.contentSize = scrollView.frame.size
         scrollView.contentInset.bottom = 100
         
         fieldParentInitialY = fieldParentView.frame.origin.y; offset = -20
@@ -48,6 +50,8 @@ class LoginViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
+        signinCover.alpha = 0;
+        
     }
     
 
@@ -57,26 +61,34 @@ class LoginViewController: UIViewController {
     }
     
 
+    
     @IBAction func didPressLogin(sender: AnyObject) {
         signinIndicator.startAnimating()
         signinButton.selected = true
         self.checkPassword()
     }
+    
 
 
    func checkPassword() {
         
         if
-            emailField.text == "beth@gmail.com" && passwordField.text == "pass" {
-                signinIndicator.startAnimating()
-                signinButton.selected = true
-        //performSegueWithIdentifier("yourSegue", sender: nil)
+            emailField.text == "b" && passwordField.text == "b" {
+                
+                self.signinIndicator.startAnimating()
+                self.signinCover.alpha = 1;
+                self.signinButton.selected = true
+                delay(2, closure: { () -> () in
+                    self.performSegueWithIdentifier("LoggedInSegue", sender: nil)
+                })
                 
                 
         }
-        else if emailField.text == "" || passwordField.text == "" {
             
-            let emptyAlert = UIAlertController(title: "Email Required", message: "Try that one again.", preferredStyle: UIAlertControllerStyle.Alert)
+        else if
+            emailField.text == "" || passwordField.text == "" {
+            
+            let emptyAlert = UIAlertController(title: "Womp, Womp", message: "Something is missing. Try again.", preferredStyle: UIAlertControllerStyle.Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
             })
@@ -84,12 +96,27 @@ class LoginViewController: UIViewController {
             emptyAlert.addAction(okAction)
             
             presentViewController(emptyAlert, animated: true, completion: nil)
+                
+             signinIndicator.stopAnimating()
         }
             
         
         else {
-            signinIndicator.stopAnimating()
-            signinButton.selected = false
+            signinIndicator.startAnimating()
+            self.signinCover.alpha = 1;
+            delay(2, closure: { () -> () in
+                
+                let alert = UIAlertController(title: "Womp, Womp!", message: "Something is wrong. Try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                self.signinIndicator.stopAnimating()
+                self.signinCover.alpha = 0;
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+                   
+                })
+                
+                alert.addAction(okAction)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+            })
         }
     }
 
@@ -107,7 +134,6 @@ class LoginViewController: UIViewController {
         fieldParentView.frame.origin.y = fieldParentInitialY
         
         buttonParentView.frame.origin.y = buttonParentInitialY
-        
     
     }
     
