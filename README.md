@@ -67,7 +67,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-https://github.com/bshoup/Homework-week2/blob/master/shoup-homework-week2.gif?raw=true
+Homework-week2/shoup-homework-week2.gif
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
