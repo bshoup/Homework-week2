@@ -11,7 +11,16 @@ import UIKit
 class UserViewController: UIViewController, UIScrollViewDelegate {
 
   
+    @IBOutlet weak var tile1View: UIImageView!
+    @IBOutlet weak var tile2View: UIImageView!
+    
+    @IBOutlet weak var tile3View: UIImageView!
+    
+    @IBOutlet weak var tile4View: UIImageView!
+    @IBOutlet weak var tile5View: UIImageView!
    
+    @IBOutlet weak var tile6View: UIImageView!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     
@@ -19,11 +28,7 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
       scrollView.contentSize = CGSize(width: 320, height: 1136)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-        
-        // Do any additional setup after loading the view.
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,25 +37,6 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    func keyboardWillShow(notification: NSNotification!) {
-        
-    }
-    
-    func keyboardWillHide(notification: NSNotification!) {
-        
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

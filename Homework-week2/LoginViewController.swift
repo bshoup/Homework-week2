@@ -8,12 +8,13 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var signinButton: UIButton!
     
     @IBOutlet weak var fieldParentView: UIView!
@@ -73,7 +74,7 @@ class LoginViewController: UIViewController {
    func checkPassword() {
         
         if
-            emailField.text == "b" && passwordField.text == "b" {
+            emailField.text == "beth@gmail.com" && passwordField.text == "pass" {
                 
                 self.signinIndicator.startAnimating()
                 self.signinCover.alpha = 1;
@@ -88,7 +89,7 @@ class LoginViewController: UIViewController {
         else if
             emailField.text == "" || passwordField.text == "" {
             
-            let emptyAlert = UIAlertController(title: "Womp, Womp", message: "Something is missing. Try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            let emptyAlert = UIAlertController(title: "Womp, Womp", message: "Both Email and Password are required. Try Again.", preferredStyle: UIAlertControllerStyle.Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
             })
@@ -137,6 +138,9 @@ class LoginViewController: UIViewController {
     
     }
     
+    @IBAction func backButton(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
    
     @IBAction func didTap(sender: AnyObject) {
         view.endEditing(true)

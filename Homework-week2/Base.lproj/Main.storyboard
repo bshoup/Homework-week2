@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2tA-dz-Wgd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ybg-16-jZI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -52,6 +52,30 @@
                                             <segue destination="7rX-Io-LCb" kind="push" id="Ond-oJ-eqU"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="L1a-ko-0x0">
+                                        <rect key="frame" x="46" y="748" width="153" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="OPv-ZS-ZmX">
+                                        <rect key="frame" x="45" y="901" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="JRi-jb-vTe">
+                                        <rect key="frame" x="122" y="901" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="WXx-oa-gEv">
+                                        <rect key="frame" x="200" y="748" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="dgj-dr-5om">
+                                        <rect key="frame" x="200" y="824" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="E7d-AD-br4">
+                                        <rect key="frame" x="200" y="902" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -62,6 +86,12 @@
                     <size key="freeformSize" width="320" height="1157"/>
                     <connections>
                         <outlet property="scrollView" destination="xbI-ZF-jn8" id="UfA-li-eWy"/>
+                        <outlet property="tile1View" destination="P5o-Lx-Yim" id="vUE-Dc-eAt"/>
+                        <outlet property="tile2View" destination="g6g-CU-mUs" id="HwT-LA-jCF"/>
+                        <outlet property="tile3View" destination="efz-5T-KyA" id="gIr-fJ-SgM"/>
+                        <outlet property="tile4View" destination="gCf-Oy-CuA" id="4AJ-mD-Cez"/>
+                        <outlet property="tile5View" destination="gV0-aP-SQz" id="LEt-Pl-IdT"/>
+                        <outlet property="tile6View" destination="nhE-hO-uAr" id="yV4-Jh-KbG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fST-pO-6I6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,9 +110,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pnf-Ux-q3U" userLabel="back UIbutton">
+                                <rect key="frame" x="9" y="27" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pjB-71-N0A">
-                                <rect key="frame" x="0.0" y="65" width="320" height="1137"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="2S7-My-ihL" userLabel="fieldParentView">
                                         <rect key="frame" x="8" y="0.0" width="304" height="272"/>
@@ -106,7 +140,7 @@
                                                 <rect key="frame" x="14" y="161" width="277" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -144,9 +178,12 @@
                                     <outletCollection property="gestureRecognizers" destination="FxC-Od-Vg2" appends="YES" id="dbV-b3-JDK"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pnf-Ux-q3U" userLabel="back UIbutton">
-                                <rect key="frame" x="9" y="27" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zPY-nk-AEZ">
+                                <rect key="frame" x="1" y="10" width="71" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backButton:" destination="7rX-Io-LCb" eventType="touchUpInside" id="lLS-qK-VtM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,6 +194,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="576"/>
                     <connections>
+                        <outlet property="backButton" destination="zPY-nk-AEZ" id="GqE-Ay-kdo"/>
                         <outlet property="buttonParentView" destination="yHK-d9-eah" id="2Du-ru-kCD"/>
                         <outlet property="emailField" destination="BWi-Jb-Pnd" id="KwC-ji-TKh"/>
                         <outlet property="fieldParentView" destination="2S7-My-ihL" id="Ma4-53-0KV"/>
